@@ -28,6 +28,6 @@
 
 ## 📞 Контакты
 
-(с) 2025-2026 by Ivan "VDM" Kalininskiy
+(с) 2026 by Ivan "VDM" Kalininskiy
 - Telegram: [@VanDamM](https://t.me/VanDamM)
 - GitHub: [kalininskiy](https://github.com/kalininskiy)
