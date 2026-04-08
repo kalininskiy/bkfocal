@@ -1,0 +1,56 @@
+{
+  "FOCAL Program Template": {
+    "prefix": "prog",
+    "body": [
+      "01.10 SET X=0",
+      "01.20 TYPE \"Привет из Фокала!\",!",
+      "01.30 FOR I=1,10; DO 02.00",
+      "01.40 QUIT",
+      "",
+      "02.00 TYPE \"Итерация:\",I,!",
+      "02.10 SET X=X+I",
+      "02.20 RETURN"
+    ],
+    "description": "Шаблон минимальной программы на Фокале"
+  },
+  "FOR loop": {
+    "prefix": "for",
+    "body": "FOR ${1:I}=${2:1},${3:10}; DO ${4:02.00}",
+    "description": "Цикл FOR"
+  },
+  "IF conditional": {
+    "prefix": "if",
+    "body": "IF (${1:X}>${2:0}) ${3:01.20},${4:01.30},${5:01.40}",
+    "description": "Условный IF (три ветки)"
+  },
+  "SET variable": {
+    "prefix": "set",
+    "body": "SET ${1:X}=${2:0}",
+    "description": "Присваивание SET"
+  },
+  "TYPE print": {
+    "prefix": "type",
+    "body": "TYPE ${1:\"текст\"},${2:X},!",
+    "description": "Вывод TYPE (с ! = новая строка)"
+  },
+  "ASK input": {
+    "prefix": "ask",
+    "body": "ASK \"${1:Введите X}\",X",
+    "description": "Ввод ASK"
+  },
+  "DO subroutine": {
+    "prefix": "do",
+    "body": "DO ${1:02.00}",
+    "description": "Вызов подпрограммы DO"
+  },
+  "RETURN": {
+    "prefix": "ret",
+    "body": "RETURN",
+    "description": "Возврат из подпрограммы"
+  },
+  "QUIT": {
+    "prefix": "quit",
+    "body": "QUIT",
+    "description": "Завершение программы"
+  }
+}

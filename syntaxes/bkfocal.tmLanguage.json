@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "FOCAL (BK-0010)",
+    "patterns": [
+        { "include": "#lineNumber" },
+        { "include": "#comments" },
+        { "include": "#commands" },
+        { "include": "#functions" },
+        { "include": "#strings" },
+        { "include": "#numbers" },
+        { "include": "#operators" }
+    ],
+    "repository": {
+"lineNumber": {
+            "name": "meta.line.number.focal",
+            "match": "^\\s*\\b\\d{1,2}\\.\\d{1,2}\\b",
+            "captures": {
+                "0": { "name": "constant.numeric.line-number.focal" }
+            }
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.focal",
+                    "begin": "\\b(C|COMMENT)\\b",
+                    "end": "$",
+                    "patterns": []
+                }
+            ]
+        },
+		"commands": {
+            "patterns": [
+                {
+                    "name": "keyword.control.focal",
+                    "match": "(?i:\\b(A|ASK|D|DO|F|FOR|G|GO|GOTO|E|ERASE|I|IF|Q|QUIT|R|RETURN|S|SET|T|TYPE|W|WRITE|E|ERASE|L|LIBRARY|M|MODIFY|X|XECUTE|W|WRITE)\\b)"
+                }
+            ]
+        },
+        "functions": {
+            "name": "entity.name.function.focal",
+            "match": "(?i:\\b(FABS|FSGN|FSIN|FCOS|FTAN|FATAN|FASIN|FACOS|FEXP|FLOG|FLOG10|FITR|FRAN|FCHR|FSQT|FSBR|FK|FT|FV|FP|FX)\\b)"
+        },
+        "strings": {
+            "name": "string.quoted.double.focal",
+            "begin": "\"",
+            "end": "\""
+        },
+        "numbers": {
+            "name": "constant.numeric.focal",
+            "match": "-?\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+        },
+        "operators": {
+            "name": "keyword.operator.focal",
+            "match": "[+\\-*/=<>]|\\*\\*|<=|>=|<>|!"
+        }
+    },
+    "scopeName": "source.bkfocal"
+}

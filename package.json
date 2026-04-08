@@ -1,0 +1,50 @@
+{
+  "name": "bkfocal",
+  "displayName": "BK FOCAL",
+  "description": "BK FOCAL syntax highlighting / Подсветка синтаксиса, автодополнение и поддержка языка ФОКАЛ (для БК-0010-01)",
+  "version": "0.0.1",
+  "publisher": "kalininskiy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kalininskiy/bkfocal.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "icon": "images/bkfocal.png",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "focal",
+    "bk-0010",
+    "бк",
+    "фокал",
+    "retro"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bkfocal",
+      "aliases": [
+          "FOCAL",
+          "Focal BK",
+          "Фокал БК-0010",
+          "BK FOCAL"
+      ],
+      "extensions": [".foc",".focal",".bkf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bkfocal",
+      "scopeName": "source.bkfocal",
+      "path": "./syntaxes/bkfocal.tmLanguage.json"
+    }],
+    "snippets": [
+      {
+        "language": "bkfocal",
+        "path": "./snippets/bkfocal.code-snippets"
+      }
+    ]
+  }
+}
